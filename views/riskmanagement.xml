@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+ 
+  <record id="action_riskmanagement_risks_line_form" model="ir.ui.view">
+   <field name="name">riskmanagement.risks.form</field>
+   <field name="model">riskmanagement.risks</field>
+   <field name="arch">
+   <form>
+   <sheet>
+    <group>
+ <field name="risk"/>
+   <field name="inherent_risk"/>
+   <field name="current_risk"/>
+   <field name="residual_risk"/>
+   <field name="department"/>
+   <field name="state_of_risk"/>
+    </group>
+    </sheet>
+   </form>
+   </field>
+ </record>
+
+   <record id="action_riskmanagement_risks_line_tree" model="ir.ui.view">
+   <field name="name">riskmanagement.risks.form</field>
+   <field name="model">riskmanagement.risks</field>
+   <field name="arch">
+   <tree>
+   <field name="risk"/>
+   <field name="inherent_risk"/>
+   <field name="current_risk"/>
+   <field name="residual_risk"/>
+   <field name="department"/>
+   <field name="state_of_risk"/>
+
+   </tree>
+   </field>
+ </record>
+
+ <record id="action_riskmanagement_records.action_window" model="ir.actions.act_window">
+   <field name="risk">Risk</field>
+   <field name="type">ir.actions.act_window</field>
+   <field name="res_model">riskmanagement.risk</field>
+   <field name="view_mode">calendar,kanbar,graph,tree,form</field>
+ </record>
+
+   <menuitem id="menu_riskmanagement_save"
+     name="Riskmanagent Record"
+     parent="menu_riskmanagement_framework"
+     action="action_riskmanagement_risks"
+     sequence="10"
+   />
+
+</odoo>

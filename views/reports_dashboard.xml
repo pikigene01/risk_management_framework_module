@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+
+   <record id="action_riskmanagement_risks_graph_view" model="ir.ui.view">
+   <field name="name">riskmanagement.risks.form</field>
+   <field name="model">riskmanagement.risks</field>
+   <field name="arch" type="xml">
+   <graph disable_linking="1" type="bar">
+   <field name="risk"/>
+   <field name="inherent_risk"/>
+
+   </graph>
+   </field>
+ </record>
+
+  <record id="action_riskmanagement_risks" model="ir.actions.act_window">
+   <field name="risk">Risk</field>
+   <field name="type">ir.actions.act_window</field>
+   <field name="res_model">riskmanagement.risk</field>
+   <field name="view_mode">tree,form</field>
+ </record>
+
+   <menuitem id="menu_riskmanagement_save"
+     name="Riskmanagent Record"
+     parent="menu_riskmanagement_framework"
+     action="action_riskmanagement_risks_graph_view"
+     sequence="10"
+   />
+
+</odoo>

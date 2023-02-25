@@ -15,7 +15,7 @@
  </record>
 
   <record id="action_riskmanagement_risks" model="ir.actions.act_window">
-   <field name="risk">Risk</field>
+   <field name="name">Risk</field>
    <field name="type">ir.actions.act_window</field>
    <field name="res_model">riskmanagement.risk</field>
    <field name="view_mode">tree,form</field>
@@ -24,7 +24,7 @@
    <menuitem id="menu_riskmanagement_save"
      name="Riskmanagent Record"
      parent="menu_riskmanagement_framework"
-     action="action_riskmanagement_risks_graph_view"
+     action="action_riskmanagement_risks"
      sequence="10"
    />
 

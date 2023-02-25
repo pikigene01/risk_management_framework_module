@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+
+   <record id="action_riskmanagement_home_form" model="ir.ui.view">
+   <field name="name">riskmanagement.framework.form</field>
+   <field name="model">riskmanagement.framework</field>
+   <field name="arch" type="xml">
+   <sheet>
+
+  <notebook>
+     <page string="Company Name">
+   <form string="Questions">
+<h1>
+   <field name="prompt" value="Enter Company Name" placeholder="prompt"/>
+</h1>
+     <group>
+   <field name="answer"/>
+     </group>
+      <footer>
+                    <button name="action_next" id="jsxj" type="object" string="Next" class="btn btn-primary"/>
+     </footer>
+
+     <!-- button to save field when clicked -->
+   </form>  
+   <!-- i placed form here because l will be saving answers in different spot -->
+
+     </page>
+     <page string="Location">
+   <form string="Questions">
+<h1>
+   <field name="prompt" value="Enter Company Location" placeholder="prompt"/>
+</h1>
+     <group>
+   <field name="answer"/>
+     </group>
+      <footer>
+                    <button name="action_next" id="jsxj" type="object" string="Next" class="btn btn-primary"/>
+     </footer>
+
+     <!-- button to save field when clicked -->
+   </form>  
+   <!-- i placed form here because l will be saving answers in different spot -->
+
+     </page>
+
+   </notebook>
+   </sheet>
+   </field>
+ </record>
+
+   <record id="action_riskmanagement_home_tree" model="ir.ui.view">
+            <field name="name">Home View</field>
+            <field name="model">riskmanagement.framework</field>
+            <field name="arch" type="xml">
+            <tree string="Risk Management Home">
+            <field name="prompt"/>
+            <field name="answer"/>
+
+            </tree>
+            </field>
+ </record>
+
+  <record id="action_riskmanagement_home" model="ir.actions.act_window">
+   <field name="name">Risk Management Framework</field>
+   <field name="type">ir.actions.act_window</field>
+   <field name="res_model">riskmanagement.framework</field>
+   <field name="view_mode">tree,form</field>
+ </record>
+
+   <menuitem id="menu_riskmanagement_get_home"
+     name="Riskmanagent Home"
+     parent="menu_riskmanagement_framework"
+     action="action_riskmanagement_home"
+     sequence="10"
+   />
+
+</odoo>

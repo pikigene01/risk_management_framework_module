@@ -15,7 +15,7 @@ class RiskmanagementFramework(models.Model):
     _name = "riskmanagement.framework"
     _description = "Risk Management Database"
 
-    prompt = fields.Char(string="prompt", required=True)
-    answer = fields.Text(string="answer")
+    prompt = fields.Char(string="prompt")
+    answer = fields.Text(string="answer", required=True)
     response = fields.Text(string="response")
     
